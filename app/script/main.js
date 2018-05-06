@@ -13,6 +13,8 @@ const cart = {
     proceedSubtotalClass:'.proceed-subtotal',
     grandPriceClass:'.grand-price',
 
+
+
     sumOfSubtotals() {
         let allSums = document.querySelectorAll('.subtotal');
         for (let x = 0; x < allSums.length; x++) {
