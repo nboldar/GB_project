@@ -9,6 +9,10 @@ const cart = {
     coupon: 100,
     grandTotal: 0,
     proceedSubtotal: 0,
+    subtotalClass:'.subtotal',
+    proceedSubtotalClass:'.proceed-subtotal',
+    grandPriceClass:'.grand-price',
+
     sumOfSubtotals() {
         let allSums = document.querySelectorAll('.subtotal');
         for (let x = 0; x < allSums.length; x++) {
