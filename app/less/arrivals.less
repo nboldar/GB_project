@@ -1,0 +1,60 @@
+@import "../less/variables.less";
+@import "../less/mixins.less";
+
+.arrivals-conteiner {
+  background-color: #f8f3f4;
+  width: 100%;
+}
+
+.arrivals {
+  // height: 127px;
+  padding: 55px 0;
+  width: @width;
+  margin: 0 auto;
+  .flexbox(flex,row,space-between,center,nowrap);
+  box-sizing: border-box;
+}
+
+.arrivals_new {
+  .text(24px,@red-color);
+  .upper;
+  color: #f16d7f;
+}
+
+.breadcrumbs {
+  width: auto;
+  // height: 17px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  // margin-right: 18%;
+}
+
+.breadcrumbs_item {
+  list-style-type: none;
+  // height: 14px;
+  margin: auto 5px;
+  font-size: 14px;
+}
+
+.arrivals li:not(:first-child)::before {
+  content: "/";
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.breadcrumbs_item_a {
+  text-decoration: none;
+  .upper;
+  color: @black-text;
+}
+
+.breadcrumbs_item_a:hover {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.active {
+  color: #f16d7f;
+  text-transform: uppercase;
+}

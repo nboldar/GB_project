@@ -1,0 +1,267 @@
+@import url("header.css");
+@import url("footer.css");
+@import url("arrivals.css");
+@font-face {
+  font-family: lato;
+  src:url("../fonts/Lato-Regular.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.arrivals {
+  height: 127px;
+  width: 100%;
+  background-color: #f8f3f4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.arrivals_new {
+  color: #f16d7f;
+  text-transform: uppercase;
+  height: 24px;
+  margin-left: 20%;
+  font-size: 24px;
+}
+
+.breadcrumbs {
+  width: auto;
+  height: 17px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 18%;
+}
+
+.breadcrumbs_item {
+  list-style-type: none;
+  height: 14px;
+  margin: auto 5px;
+  font-size: 14px;
+}
+
+.arrivals li:not(:first-child)::before {
+  content: "/";
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.breadcrumbs_item_a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+}
+
+.breadcrumbs_item_a:hover {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.active {
+  color: #f16d7f;
+  text-transform: uppercase;
+}
+
+.checkout-content {
+  height: auto;
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 5% 20% 0 20%;
+}
+
+.checkout-content_shipping-adress {
+  height: auto;
+  width: 100%;
+  border-bottom: 1px solid #b3b2b2;
+}
+
+.checkout-content_shipping-adress summary {
+  height: auto;
+  padding-bottom: 30px;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: black;
+}
+
+summary:hover {
+  color: #b3b2b2;
+  font-weight: 1100;
+  cursor: pointer;
+}
+
+:focus {
+  outline: 0;
+  outline: none;
+  cursor: pointer;
+}
+
+.head-of-checkout {
+  font-size: 16px;
+  color: #222222;
+  font-weight: 900;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+.check-as-who_register {
+  height: 445px;
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin-top: 38px;
+  padding-left: 25px;
+}
+
+.check-as-who, .register {
+  height: 445px;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.register>form {
+  height: 175px;
+  width: auto;
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.check-as-who p, .register p {
+  height: 20px;
+  width: auto;
+}
+
+.check-as-who_form {
+  display: block;
+  height: 70px;
+  margin: 20px 0;
+}
+
+.guest {
+  margin: 10px 0;
+  height: 13px;
+}
+
+.choice {
+  margin: 0 10px;
+  height: 19px;
+  text-transform: uppercase;
+}
+
+.continue-btn {
+  height: 50px;
+  width: 180px;
+  margin-top: 20px;
+  border: 1px solid #b3b2b2;
+  background-color: #ffffff;
+  font-weight: 800;
+}
+
+.continue-btn:hover {
+  background-color: #b3b2b2;
+  color: #ffffff;
+}
+.continue-btn:active{
+  color: black;
+  background-color: #ffffff;
+  -webkit-box-shadow: inset -1px -1px 3px 3px rgba(0,0,0,0.6);
+-moz-box-shadow: inset -1px -1px 3px 3px rgba(0,0,0,0.6);
+box-shadow: inset -1px -1px 3px 3px rgba(0,0,0,0.6);
+}
+
+.up-sigh {
+  font-size: 13px;
+  color: #222222;
+  text-transform: uppercase;
+}
+
+.down-sigh {
+  font-size: 13px;
+  color: #b3b2b2;
+}
+
+.password {
+  height: 43px;
+  width: 390px;
+  margin: 10px 0;
+  border: 1px solid #b3b2b2;
+}
+
+.password:hover {
+  -webkit-box-shadow: 0 0 20px 4px rgba(127, 139, 147, 0.91) inset;
+  box-shadow: 0 0 20px 4px rgba(127, 139, 147, 0.91) inset;
+}
+
+.red-star {
+  color: red;
+  font-weight: 900;
+}
+
+.forgot {
+  margin-left: 32px;
+}
+
+.forgot a {
+  text-decoration: none;
+  color: #222222;
+  font-weight: 700;
+}
+
+.forgot a:hover {
+  text-decoration: underline;
+}
+
+.other-content {
+  height: 45px;
+  margin-top: 30px;
+  border-bottom: 1px solid #b3b2b2;
+}
+
+.other-content summary {
+  text-transform: uppercase;
+  font-size: 16px;
+}

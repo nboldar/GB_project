@@ -1,0 +1,13 @@
+{
+  "name": "myproject",
+  "description": "bower try",
+  "main": "index.js",
+  "authors": [
+    "nikolay boldar"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/nboldar/1_more_test",
+  "dependencies": {
+    "normalize.css": "^8.0.0"
+  }
+}

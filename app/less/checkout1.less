@@ -1,0 +1,269 @@
+@import "mixins.less";
+@import "variables.less";
+@import "header.less";
+@import "arrivals.less";
+@import "footer.less";
+@font-face {
+  font-family: lato;
+  src: url("../fonts/Lato-Regular.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.checkout-content {
+  height: auto;
+  width: @width;
+  .flexbox(flex,column,center,flex-start,nowrap);
+  margin: 70px auto;
+}
+
+.checkout-content_shipping-adress {
+  height: auto;
+  width: 100%;
+  border-bottom: 1px solid #b3b2b2;
+}
+
+.checkout-content_shipping-adress summary {
+  height: auto;
+  padding-bottom: 30px;
+  font-size: 16px;
+  .upper;
+  color: @black-text;
+  .block;
+
+  &:hover {
+    color: #b3b2b2;
+    font-weight: 1100;
+    cursor: pointer;
+  }
+  // &:active{
+  //   animation: sweep .5s ease-in-out;
+  // }
+}
+@keyframes sweep {
+  0% {
+    opacity: 0;
+    margin-left: -20px;
+  }
+
+  100% {
+    opacity: 1;
+    margin-left: 0;
+  }
+}
+
+details[open] summary ~ * {
+  animation: sweep 0.5s ease-in-out;
+}
+
+:focus {
+  outline: none;
+  cursor: pointer;
+}
+
+.head-of-checkout {
+  font-size: 16px;
+  font-weight: 900;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details summary {
+  .block;
+}
+
+.check-as-who_register {
+  height: 445px;
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin-top: 38px;
+  padding-left: 25px;
+}
+
+.check-as-who,
+.register {
+  height: 445px;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.register > form {
+  height: auto;
+  width: auto;
+  margin-top: 10px;
+  .flexbox(flex,column,space-around,flex-start,nowrap);
+}
+
+.check-as-who p,
+.register p {
+  height: 20px;
+  width: auto;
+}
+
+.check-as-who_form {
+  // .block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 70px;
+  margin: 20px 0;
+}
+
+.check-as-who_form:first-child {
+  margin-bottom: 10px;
+}
+
+.guest {
+  margin: 10px 0;
+  height: 13px;
+}
+
+.choice {
+  // margin: 10px 10px;
+  height: 19px;
+  .upper;
+}
+
+.up-sigh {
+  font-size: 13px;
+  color: @black-text;
+  .upper;
+}
+
+.guest {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  margin: 10px 0 15px 7px;
+}
+
+.guest + label {
+  position: relative;
+  padding: 0 0 0 35px;
+  cursor: pointer;
+}
+
+.guest + label:before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #CDD1DA;
+  border-radius: 50%;
+  background: #FFF;
+}
+
+.guest + label:after {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: @grey-text;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.5);
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.guest:checked + label:after {
+  opacity: 1;
+}
+
+.guest:focus + label:before {
+  box-shadow: 0 0 0 1px rgba(185,185,185,.7);
+}
+
+.continue-btn {
+  height: 50px;
+  width: 180px;
+  margin-top: 20px;
+  border: 1px solid @grey-text;
+  background-color: #fff;
+  font-weight: 800;
+
+  &:hover {
+    background-color: @grey-text;
+    color: #fff;
+  }
+
+  &:active {
+    color: @black-text;
+    background-color: darken(@grey-text,20);
+  }
+}
+
+.down-sigh {
+  font-size: 13px;
+  color: @grey-text;
+}
+
+.password {
+  height: 40px;
+  width: 390px;
+  margin: 10px 0;
+  padding-left: 15px;
+  border: 1px solid @grey-text;
+
+  &:hover {
+    background-color: lighten(@grey-text,20);
+  }
+}
+
+.red-star {
+  color: red;
+  font-weight: 900;
+}
+
+.forgot {
+  margin-left: 32px;
+}
+
+.forgot a {
+  text-decoration: none;
+  color: @black-text;
+  font-weight: 700;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.other-content {
+  width: 100%;
+  height: 45px;
+  margin-top: 30px;
+  border-bottom: 1px solid #b3b2b2;
+}
+
+.other-content summary {
+  .upper;
+  font-size: 16px;
+}
