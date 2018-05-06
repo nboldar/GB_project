@@ -1,0 +1,9 @@
+Index: README.md
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- README.md	(date 1525594768190)
++++ README.md	(date 1525594768190)
+@@ -0,0 +1,1 @@
++"# GB_project" 
