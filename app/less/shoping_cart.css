@@ -301,6 +301,23 @@
   text-transform: uppercase;
   margin: 0 15px;
 }
+.navigation-menu-submenu {
+  position: absolute;
+  top: 140px;
+  background-color: #fff;
+}
+.navigation-menu-submenu > li {
+  list-style: none;
+  -webkit-box-shadow: -4px 1px 2px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: -4px 1px 2px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: -4px 1px 2px 0px rgba(0, 0, 0, 0.1);
+}
+.show {
+  display: inline-block;
+}
+.hide {
+  display: none;
+}
 .burger-menu {
   display: block;
   margin-left: 5px;

@@ -1,4 +1,40 @@
 "use strict";
+const menu = {
+    navigationMAinMenuClass: '.navigation-menu>li',
+    navigationSubMenuClass: '.navigation-menu-submenu',
+    mainMenuItems: [],
+    subMenuItems: [],
+
+
+
+    showSubMenu(event) {
+        console.log('show');
+
+        event.target.children[1].classList.remove('hide');
+        event.target.children[1].classList.add('show');
+    },
+    hideSubMenu(event) {
+        console.log('hide');
+
+
+        event.target.children[1].classList.remove('show');
+        event.target.children[1].classList.add('hide');
+    },
+    initShowSubMenu() {
+        let mainMenu = this.mainMenuItems;
+        let subMenu = this.subMenuItems;
+        subMenu = document.querySelectorAll(this.navigationSubMenuClass);
+        // console.log(subMenu);
+
+        mainMenu = document.querySelectorAll(this.navigationMAinMenuClass);
+        for (let x = 0; x < mainMenu.length; x++) {
+            mainMenu[x].addEventListener("mouseenter", this.showSubMenu);
+            mainMenu[x].addEventListener("mouseleave", this.hideSubMenu);
+        }
+    },
+
+};
+
 
 const cart = {
     settings: {
@@ -9,19 +45,21 @@ const cart = {
     coupon: 100,
     grandTotal: 0,
     proceedSubtotal: 0,
-    subtotalClass:'.subtotal',
-    proceedSubtotalClass:'.proceed-subtotal',
-    grandPriceClass:'.grand-price',
-
+    subtotalClass: '.subtotal',
+    proceedSubtotalClass: '.proceed-subtotal',
+    grandPriceClass: '.grand-price',
+    unitePriceClass: '.unite-price',
+    cartContentClass: '.cart-content',
+    closeSimbolClass: 'fa-times-circle',
 
 
     sumOfSubtotals() {
-        let allSums = document.querySelectorAll('.subtotal');
+        let allSums = document.querySelectorAll(this.subtotalClass);
         for (let x = 0; x < allSums.length; x++) {
             this.proceedSubtotal += +allSums[x].innerHTML;
         }
-        document.querySelector('.proceed-subtotal').innerHTML = `sub total $${this.proceedSubtotal}`;
-        document.querySelector('.grand-price').innerHTML=`$${this.proceedSubtotal-this.coupon}`;
+        document.querySelector(this.proceedSubtotalClass).innerHTML = `sub total $${this.proceedSubtotal}`;
+        document.querySelector(this.grandPriceClass).innerHTML = `$${this.proceedSubtotal - this.coupon}`;
     },
 
 
@@ -33,8 +71,8 @@ const cart = {
 
     quentityOfItems: null,
     addPrice() {
-        let priceBox = document.querySelectorAll('.unite-price');
-        let subTotal = document.querySelectorAll('.subtotal');
+        let priceBox = document.querySelectorAll(this.unitePriceClass);
+        let subTotal = document.querySelectorAll(this.subtotalClass);
         for (let y = 0; y < priceBox.length; y++) {
             priceBox[y].innerHTML = `$${this.settings.price}`;
             subTotal[y].innerHTML = `${this.settings.price * this.settings.quan}`;
@@ -50,7 +88,7 @@ const cart = {
 
         // this.grandTotalSum();
 
-        this.inCartItems = document.querySelectorAll('.cart-content');
+        this.inCartItems = document.querySelectorAll(this.cartContentClass);
         document.addEventListener('click', event => this.eventHandler(event));
 
     },
@@ -58,7 +96,7 @@ const cart = {
         this.deleteItem(event);
     },
     deleteItem(event) {
-        if (event.target.classList.contains('fa-times-circle')) {
+        if (event.target.classList.contains(this.closeSimbolClass)) {
             let elem = event.target.parentNode.parentNode;
             elem.remove();
             this.proceedSubtotal = 0;
@@ -73,7 +111,7 @@ const cart = {
 
     },
     subtotalSum(event) {
-        console.log(event.target.parentNode.children[3]);
+        // console.log(event.target.parentNode.children[3]);
         const quan = event.target.value;
         const refSum = event.target.parentNode.children[3];
         refSum.innerHTML = quan * this.settings.price;
@@ -85,4 +123,10 @@ const cart = {
 
 
 };
-window.onload = () => cart.initItems();
+const init = {
+    initAll() {
+        cart.initItems();
+        menu.initShowSubMenu();
+    }
+};
+window.onload = () => init.initAll();
