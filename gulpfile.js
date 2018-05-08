@@ -23,9 +23,12 @@ var cssnano = require('cssnano'); // минификатор сss в рамках
 var mQueries=require('gulp-group-css-media-queries');
 var reload = browserSync.reload();
 var paths = {
-    html: ['index.html'],
-    css: ['index.css'],
-    script: ['my-script.js']
+
+    styles: {
+        src: 'app/less/*.less',
+        dest: 'dist/css'
+    },
+
 };
 
 gulp.task('imagemin', function () {
@@ -71,6 +74,9 @@ gulp.task('less', function () {
 
 gulp.task('exitServe', function () {
     browserSync.exit();
+});
+gulp.task('watch',function () {
+ gulp.watch('app/less/*.less',['less'])
 });
 
 
