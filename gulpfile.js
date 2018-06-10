@@ -79,4 +79,8 @@ gulp.task('watch',function () {
  gulp.watch('app/less/*.less',['less'])
 });
 
-
+gulp.task('renameimg',function () {
+    gulp.src(['app/img/product-card-img/mini/**/*'])
+        .pipe(rename({suffix:'.min'}))
+        .pipe(gulp.dest('./dist/img/product-card-img/mini'));
+});

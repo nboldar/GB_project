@@ -617,7 +617,7 @@
   justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: nowrap;
-  background-image: url("../img/Layer41.jpg");
+  background-image: url("../img/background-footer-img.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #e5e5e5;
@@ -1062,7 +1062,7 @@
   background-color: #e8e8e8;
 }
 .banner-conteiner {
-  background-image: url("../img/Layer 24.jpg");
+  background-image: url("../img/index-main-img.jpg");
   background-repeat: none;
   background-size: cover;
   width: 980px;
