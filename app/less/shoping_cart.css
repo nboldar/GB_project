@@ -279,6 +279,7 @@
   flex-wrap: nowrap;
   list-style-type: none;
   box-sizing: border-box;
+  position: relative;
 }
 .navigation-menu li {
   padding: 18px 0;
@@ -303,7 +304,7 @@
 }
 .navigation-menu-submenu {
   position: absolute;
-  top: 140px;
+  top: 52px;
   background-color: #fff;
 }
 .navigation-menu-submenu > li {
@@ -613,7 +614,7 @@
 .subscribe-conteiner {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: nowrap;
   background-image: url("../img/Layer41.jpg");
@@ -622,22 +623,6 @@
   background-color: #e5e5e5;
   background-position: 100% auto;
   width: 100%;
-}
-.subscribe-carousel-conteiner {
-  width: 980px;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-wrap: nowrap;
-}
-.carousel-item-wrapper {
-  margin-left: 20px;
-  margin-top: 84px;
-  margin-bottom: 84px;
-}
-.carousel-inner {
-  width: 45%;
 }
 .subscribe-img {
   display: block;

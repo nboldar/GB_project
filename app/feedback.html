@@ -1,19 +1,21 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="img/icon/fav.ico" type="image/ico">
-    <link rel="stylesheet" type="text/css" href="./slider.css">
     <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
-    <!--<link rel="stylesheet" type="text/css" href="slick/slick.css">-->
-    <!--<link rel="stylesheet" type="text/css" href="slick/slick-theme.css">-->
-    <link rel="stylesheet" type="text/css" href="css/shoping_cart.css">
-    <title>Shoping Cart</title>
-</head>
+    <link rel="stylesheet" type="text/css" href="./slider.css">
+    <link rel="stylesheet" href="libs/jquery-ui-1.12.1.custom/jquery-ui.min.css">
+    <!--<link rel="stylesheet" href="libs/jquery-ui-1.12.1.custom/jquery-ui.structure.min.css">-->
+    <!--<link rel="stylesheet" href="libs/jquery-ui-1.12.1.custom/jquery-ui.theme.min.css">-->
 
+
+    <link rel="stylesheet" href="css/feedback.css">
+    <title>Document</title>
+</head>
 <body>
 <!-- шапка сайта -->
 <header class="main-header">
@@ -48,7 +50,7 @@
                 <li><a href="javascript://" class="navigation-menu-item">Servise</a></li>
                 <li><a href="javascript://" class="navigation-menu-item">Useful info</a></li>
             </ul>
-            
+
         </li>
 
         <li>
@@ -111,115 +113,37 @@
 <!-- arrivals с хлебными крошками -->
 <div class="arrivals-conteiner">
     <div class="arrivals">
-        <span class="arrivals_new">new arrivals</span>
+        <span class="arrivals_new">...let us know what you think</span>
         <ul class="breadcrumbs">
             <li class="breadcrumbs_item"><a href="javascript://" class="breadcrumbs_item_a">home</a></li>
-            <li class="breadcrumbs_item"><a href="javascript://" class="breadcrumbs_item_a">men</a></li>
-            <li class="breadcrumbs_item"><span class="active">new arrivals</span></li>
+            <!--<li class="breadcrumbs_item"><a href="javascript://" class="breadcrumbs_item_a">men</a></li>-->
+            <li class="breadcrumbs_item"><span class="active">feedback</span></li>
         </ul>
     </div>
 </div>
 
 
-<div class="shopping-cart">
-    <div class="cart-header">
-        <span>product details</span>
-        <span></span>
-        <span></span>
-        <span>unite price</span>
-        <span>quantity</span>
-        <span>shipping</span>
-        <span>subtotal</span>
-        <span>action</span>
+<hr>
+<form action="javascript://" class="feedback">
+    <input class="feedback-input" id="name" type="text" placeholder="Имя">
+    <input class="feedback-input" id="birth" type="text" placeholder="Дата рождения">
+    <input class="feedback-input" id="phone" type="text" placeholder="Телефон в формате 70000000000">
+    <input class="feedback-input" id="email" type="text" placeholder="E-mail">
+    <!--<div class="feedback-city-wrapper">-->
+        <input class="feedback-input" id="city" type="text" placeholder="Город">
+        <div id="search"></div>
+    <!--</div>-->
+    <textarea class="message" placeholder="Текст сообщения"></textarea>
+    <div class="button-group">
+        <button id="submit" class="button">Отправить</button>
+        <button id="reset" class="button">Очистить</button>
     </div>
-    <div class="cart-content">
-        <div class="card">
-            <img src="img/card-img1.png" alt="Your choice">
-            <div class="card-description">
-                <span class="card-name">mango people t-shirt</span>
-                <span>Color:&nbsp;&nbsp;<span class="card-color">Red</span></span>
-                <span>Size:&nbsp;&nbsp;<span class="card-size">Xl</span></span>
-            </div>
-        </div>
-        <div class="purchase-info">
-            <span class="unite-price">$150</span>
-            <input type="number" value="1" min="1" max="1000" class="quatity"></input>
-            <span class="shipping">free</span>
-            <span class="subtotal">300</span>
-            <span class="action fa fa-times-circle" aria-hidden="true"></span>
-        </div>
+    <div id="dialog" title="Basic dialog">
+        <div></div>
     </div>
-    <div class="cart-content">
-        <div class="card">
-            <img src="img/card-img2.png" alt="Your choice">
-            <div class="card-description">
-                <span class="card-name">mango people t-shirt</span>
-                <span>Color:&nbsp;&nbsp;<span class="card-color">Red</span></span>
-                <span>Size:&nbsp;&nbsp;<span class="card-size">Xl</span></span>
-            </div>
-        </div>
-        <div class="purchase-info">
-            <span class="unite-price">$150</span>
-            <input type="number" value="1" min="1" max="1000" class="quatity"></input>
-            <span class="shipping">free</span>
-            <span class="subtotal">300</span>
-            <span class="action fa fa-times-circle" aria-hidden="true"></span>
-        </div>
-    </div>
-    <div class="cart-content">
-        <div class="card">
-            <img src="img/card-img3.png" alt="Your choice">
-            <div class="card-description">
-                <span class="card-name">mango people t-shirt</span>
-                <span>Color:&nbsp;&nbsp;<span class="card-color">Red</span></span>
-                <span>Size:&nbsp;&nbsp;<span class="card-size">Xl</span></span>
-            </div>
-        </div>
-        <div class="purchase-info">
-            <span class="unite-price">$150</span>
-            <input type="number" value="1" min="1" max="1000" class="quatity"></input>
-            <span class="shipping">free</span>
-            <span class="subtotal">300</span>
-            <span class="action fa fa-times-circle" aria-hidden="true"></span>
-        </div>
-    </div>
-    <div class="cart-shopping">
-        <button class="cart-shopping-btn">clear shopping cart</button>
-        <button class="cart-shopping-btn">continue shopping</button>
-    </div>
+</form>
 
-    <div class="cart-form">
-        <form action="/" class="shipping-address">
-            <span class="shipping-address-name">shipping address</span>
-            <select class="shipping-address-city shipping-address-state">
-                <option value="" selected>Bangladesh</option>
-                <option value="">New York</option>
-                <option value="">London</option>
-                <option value="">Moscow</option>
-                <option value="">Paris</option>
-            </select>
-            <input type="text" class="shipping-address-state" placeholder="State">
-            <input type="text" class="shipping-address-state" placeholder="Postcode/Zip">
-            <button class="cart-shopping-btn cart-shopping-btn-min" type="reset">get a quote</button>
-        </form>
 
-        <form action="/" class="shipping-address ">
-            <span class="shipping-address-name">coupon discount</span>
-            <span class="coupon">Enter your coupon code if you have one</span>
-
-            <input type="text" class="shipping-address-state" placeholder="State">
-            <button class="cart-shopping-btn cart-shopping-btn-min" type="reset">apply coupon</button>
-        </form>
-        <form action="/" class="proceed">
-            <span class="proceed-subtotal">sub total&nbsp;&nbsp;&nbsp;$900</span>
-            <span class="proceed-grandtotal">grund total&nbsp;&nbsp;
-                <span class="grand-price">$900</span>
-            </span>
-            <button class="proceed-btn" type="reset">proceed to checkout</button>
-        </form>
-    </div>
-</div>
-<!-- а теперь футер -->
 <div class="subscribe">
     <div class="subscribe-logo-form-conteiner">
         <!-- <div class="subscribe-main-conteiner"> -->
@@ -233,7 +157,7 @@
             <span class="subscribe-form-title">subscribe</span>
             <span class="subscribe-form-title2">for our newsletters and information</span>
             <form action="input" class="input">
-                <input class="subscribe-mail" type="email" placeholder="Enter Your Email">
+                <input class="subscribe-mail" title="Для получения новостей введите свой E-mail." type="email" placeholder="Enter Your Email">
                 <input type="button" value="Subscribe" class="subscribe-submit">
             </form>
         </div>
@@ -285,9 +209,8 @@
             </div>
         </div>
     </div>
+    <!-- </div> -->
 </div>
-
-
 <!-- а теперь тот который перед совсем футером -->
 <div class="footer">
     <div class="footer-first-part">
@@ -295,13 +218,13 @@
             <a href="index.html"><img src="img/icon/logo.png" alt="logo"></a>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Sit quaerat voluptas excepturi illum,
                 blanditiis distinctio <br> consequuntur iste, est praesentium minus, dignissimos reiciendis <br>
-                expedita dolore molestiae. Corrupti amet a,
-                commodi harum!
+                expedita dolore molestiae. Corrupti amet
+                a, commodi harum!
             </p>
             <p class="second-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Sit quaerat voluptas
                 excepturi illum, blanditiis distinctio <br> consequuntur iste, est praesentium minus, dignissimos
-                reiciendis <br> expedita dolore molestiae. Corrupti amet a,
-                commodi harum!
+                reiciendis <br> expedita dolore molestiae. Corrupti amet
+                a, commodi harum!
             </p>
 
         </div>
@@ -342,21 +265,23 @@
     <div class="foot-footer-conteiner">
         <span class="foot-footer-rights">&#169; 2017 Brand All Rights Reserved</span>
         <ul class="foot-footer-share">
-            <li><a class="social-share" href="javascript://"><span class="fa fa-facebook" aria-hidden="true"></span></a></li>
-            <li><a class="social-share" href="javascript://"><span class="fa fa-twitter" aria-hidden="true"></span></a></li>
-            <li><a class="social-share" href="javascript://"><span class="fa fa-linkedin" aria-hidden="true"></span></a></li>
-            <li><a class="social-share" href="javascript://"><span class="fa fa-pinterest-p" aria-hidden="true"></span></a></li>
-            <li><a class="social-share" href="javascript://"><span class="fa fa-google-plus" aria-hidden="true"></span></a></li>
+            <li><a class="social-share" href="javascript://"><span class="fa fa-facebook" aria-hidden="true"></span></a>
+            </li>
+            <li><a class="social-share" href="javascript://"><span class="fa fa-twitter" aria-hidden="true"></span></a>
+            </li>
+            <li><a class="social-share" href="javascript://"><span class="fa fa-linkedin" aria-hidden="true"></span></a>
+            </li>
+            <li><a class="social-share" href="javascript://"><span class="fa fa-pinterest-p" aria-hidden="true"></span></a>
+            </li>
+            <li><a class="social-share" href="javascript://"><span class="fa fa-google-plus" aria-hidden="true"></span></a>
+            </li>
         </ul>
     </div>
 </div>
-</div>
+
 <script type="text/javascript" src="libs/jquery/dist/jquery.js"></script>
 <script type="text/javascript" src="libs/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
-<!--<script type="text/javascript" src="./slider.js"></script>-->
-<script type="text/javascript" src="script/shoping_cart.js"></script>
-<script type="text/javascript" src="script/main.js"></script>
+<script type="text/javascript" src="script/feedback.js"></script>
 
 </body>
-
 </html>

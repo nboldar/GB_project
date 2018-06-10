@@ -279,6 +279,7 @@
   flex-wrap: nowrap;
   list-style-type: none;
   box-sizing: border-box;
+  position: relative;
 }
 .navigation-menu li {
   padding: 18px 0;
@@ -303,7 +304,7 @@
 }
 .navigation-menu-submenu {
   position: absolute;
-  top: 140px;
+  top: 52px;
   background-color: #fff;
 }
 .navigation-menu-submenu > li {
