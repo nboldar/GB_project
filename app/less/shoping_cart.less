@@ -15,7 +15,7 @@
 }
 // @import"../css/style_checkout.css";
 
-.shopping-cart {
+#shopping-cart {
   width: 100%;
   margin-bottom: 20px;
   // height: 900px;
@@ -33,7 +33,7 @@
 }
 
 .cart-content {
-  .flexbox(flex,row,space-between,center,nowrap);
+  .flexbox(flex,row,flex-start,center,nowrap);
   width: @width;
   margin: 20px auto;
   padding-bottom: 20px;
@@ -42,7 +42,7 @@
 
 .card {
   .flexbox(flex,row,flex-start,center,nowrap);
-  width: (@width)/2;
+  width: @width*0.3;
 
   img {
     .block;
@@ -74,10 +74,10 @@
   text-align: center;
   margin-left: 3%;
 
-  a,
-  span {
-    padding: 0.5% 3%;
-  }
+  //a,
+  //span {
+  //  padding: 0.5% 0.5%;
+  //}
 }
 .fa:hover{
   cursor:pointer;

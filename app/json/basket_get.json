@@ -2,10 +2,35 @@
   "result": 1,
   "basket": [
     {
-      "id_product": 123,
-      "url":
-      "price": 300
+      "id_product": 1,
+      "urlimg": "img/product-card-img/mini/1.min.png",
+      "title": "mango people t-shirt",
+      "size":"xl",
+      "color":"red",
+      "quantity": 2,
+      "price": 100,
+      "subamount": 200
+    },
+    {
+      "id_product": 2,
+      "urlimg": "img/product-card-img/mini/2.min.png",
+      "title": "mango people t-shirt",
+      "size":"l",
+      "color":"orange",
+      "quantity": 1,
+      "price": 200,
+      "subamount": 200
+    },
+    {
+      "id_product": 3,
+      "urlimg": "img/product-card-img/mini/3.min.png",
+      "title": "mango people t-shirt",
+      "size":"xs",
+      "color":"blue",
+      "quantity": 3,
+      "price": 300,
+      "subamount": 900
     }
   ],
-  "amount": 300
+  "amount": 1300
 }

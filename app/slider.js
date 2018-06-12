@@ -1,42 +1,4 @@
 "use strict";
-const menu = {
-    navigationMAinMenuClass: '.navigation-menu>li',
-    navigationSubMenuClass: '.navigation-menu-submenu',
-    mainMenuItems: [],
-    subMenuItems: [],
-    showSubMenu(event) {
-        event.target.children[1].classList.remove('hide');
-        event.target.children[1].classList.add('show');
-    },
-    hideSubMenu(event) {
-        event.target.children[1].classList.remove('show');
-        event.target.children[1].classList.add('hide');
-    },
-    initShowSubMenu() {
-        let mainMenu = this.mainMenuItems;
-        let subMenu = this.subMenuItems;
-        subMenu = document.querySelectorAll(this.navigationSubMenuClass);
-        // console.log(subMenu);
-
-        mainMenu = document.querySelectorAll(this.navigationMAinMenuClass);
-        // for (let x = 0; x < subMenu.length; x++) {
-        //     subMenu[x].addEventListener("mouseenter", this.showSubMenu);
-        //
-        //     subMenu[x].addEventListener("mouseleave", this.hideSubMenu);
-        //
-        //
-        // }
-        for (let x = 0; x < mainMenu.length; x++) {
-            mainMenu[x].addEventListener("mouseenter", function (event) {
-                this.showSubMenu;
-                if(event.currentTarget!=mainMenu[x])
-            });
-        }
-
-    },
-
-};
-
 function Slider(element) {
     this.el = document.querySelector(element);
     this.init();
@@ -130,7 +92,8 @@ Slider.prototype = {
 
 };
 
+
 document.addEventListener("DOMContentLoaded", function () {
     var aSlider = new Slider("#slider");
-    menu.initShowSubMenu();
+    // menu.initShowSubMenu();
 });

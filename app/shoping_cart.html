@@ -30,7 +30,9 @@
         <div class="account-btn-conteiner">
             <a href="javascript://" class="cart-img-ref">
                 <i class="fa fa-shopping-cart fa-2x cart-img" aria-hidden="true"></i>
-
+                <div id="cart-item-amount">15</div>
+                <div class="pointer"></div>
+                <div id="cart-mini"></div>
                 <!--<img class="cart-img" src="img\shopping-cart-empty.png" alt="Cart">-->
             </a>
             <button class="main-header-account-btn" name="My Account">My Account
@@ -121,68 +123,18 @@
 </div>
 
 
-<div class="shopping-cart">
+<div id="shopping-cart">
     <div class="cart-header">
         <span>product details</span>
-        <span></span>
-        <span></span>
+        <!--<span></span>-->
+        <!--<span></span>-->
         <span>unite price</span>
         <span>quantity</span>
         <span>shipping</span>
         <span>subtotal</span>
         <span>action</span>
     </div>
-    <div class="cart-content">
-        <div class="card">
-            <img src="img/product-card-img/mini/card-img1.png" alt="Your choice">
-            <div class="card-description">
-                <span class="card-name">mango people t-shirt</span>
-                <span>Color:&nbsp;&nbsp;<span class="card-color">Red</span></span>
-                <span>Size:&nbsp;&nbsp;<span class="card-size">Xl</span></span>
-            </div>
-        </div>
-        <div class="purchase-info">
-            <span class="unite-price">$150</span>
-            <input type="number" value="1" min="1" max="1000" class="quatity"></input>
-            <span class="shipping">free</span>
-            <span class="subtotal">300</span>
-            <span class="action fa fa-times-circle" aria-hidden="true"></span>
-        </div>
-    </div>
-    <div class="cart-content">
-        <div class="card">
-            <img src="img/product-card-img/mini/card-img2.png" alt="Your choice">
-            <div class="card-description">
-                <span class="card-name">mango people t-shirt</span>
-                <span>Color:&nbsp;&nbsp;<span class="card-color">Red</span></span>
-                <span>Size:&nbsp;&nbsp;<span class="card-size">Xl</span></span>
-            </div>
-        </div>
-        <div class="purchase-info">
-            <span class="unite-price">$150</span>
-            <input type="number" value="1" min="1" max="1000" class="quatity"></input>
-            <span class="shipping">free</span>
-            <span class="subtotal">300</span>
-            <span class="action fa fa-times-circle" aria-hidden="true"></span>
-        </div>
-    </div>
-    <div class="cart-content">
-        <div class="card">
-            <img src="img/product-card-img/mini/card-img3.png" alt="Your choice">
-            <div class="card-description">
-                <span class="card-name">mango people t-shirt</span>
-                <span>Color:&nbsp;&nbsp;<span class="card-color">Red</span></span>
-                <span>Size:&nbsp;&nbsp;<span class="card-size">Xl</span></span>
-            </div>
-        </div>
-        <div class="purchase-info">
-            <span class="unite-price">$150</span>
-            <input type="number" value="1" min="1" max="1000" class="quatity"></input>
-            <span class="shipping">free</span>
-            <span class="subtotal">300</span>
-            <span class="action fa fa-times-circle" aria-hidden="true"></span>
-        </div>
-    </div>
+    <div id="shopping-cart-wrapper"></div>
     <div class="cart-shopping">
         <button class="cart-shopping-btn">clear shopping cart</button>
         <button class="cart-shopping-btn">continue shopping</button>
@@ -211,9 +163,9 @@
             <button class="cart-shopping-btn cart-shopping-btn-min" type="reset">apply coupon</button>
         </form>
         <form action="/" class="proceed">
-            <span class="proceed-subtotal">sub total&nbsp;&nbsp;&nbsp;$900</span>
+            <span class="proceed-subtotal"></span>
             <span class="proceed-grandtotal">grund total&nbsp;&nbsp;
-                <span class="grand-price">$900</span>
+                <span class="grand-price"></span>
             </span>
             <button class="proceed-btn" type="reset">proceed to checkout</button>
         </form>
@@ -224,10 +176,10 @@
     <div class="subscribe-logo-form-conteiner">
         <!-- <div class="subscribe-main-conteiner"> -->
         <div class="subscribe-brand-logo">
-            <img src="img/brand_logo_img1.png" alt="Brand" class="subscribe-brand-logo-img">
-            <img src="img/brand_logo_img2.png" alt="Brand" class="subscribe-brand-logo-img">
-            <img src="img/brand_logo_img3.png" alt="Brand" class="subscribe-brand-logo-img">
-            <img src="img/brand_logo_img4.png" alt="Brand" class="subscribe-brand-logo-img">
+            <img src="img/brand-logo/brand_logo_img1.png" alt="Brand" class="subscribe-brand-logo-img">
+            <img src="img/brand-logo/brand_logo_img2.png" alt="Brand" class="subscribe-brand-logo-img">
+            <img src="img/brand-logo/brand_logo_img3.png" alt="Brand" class="subscribe-brand-logo-img">
+            <img src="img/brand-logo/brand_logo_img4.png" alt="Brand" class="subscribe-brand-logo-img">
         </div>
         <div class="subscribe-form">
             <span class="subscribe-form-title">subscribe</span>
@@ -242,37 +194,37 @@
         <div id="slider">
             <div id="slider-wrapper">
                 <div class="showed">
-                    <img src="img/slider_img1.png" alt=""/>
+                    <img src="img/slider/slider_img1.png" alt=""/>
                     <p class="caption ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci consequuntur
                         delectus dignissimos dolorum eligendi eos error fugiat necessitatibus nostrum numquam odit
                         officiis optio possimus quo reiciendis repellat, tempore temporibus voluptates.</p>
                 </div>
                 <div class="slide">
-                    <img src="img/slider_img.png" alt=""/>
+                    <img src="img/slider/slider_img.png" alt=""/>
                     <p class="caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet commodi culpa
                         cupiditate eum eveniet exercitationem iste molestiae nostrum omnis quaerat. Cum dolorum error
                         libero nam provident, quam saepe tempora veritatis.</p>
                 </div>
                 <div class="slide">
-                    <img src="img/slider_img2.png" alt=""/>
+                    <img src="img/slider/slider_img2.png" alt=""/>
                     <p class="caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam
                         aspernatur assumenda dicta distinctio error ex harum hic ipsum natus odio perspiciatis quasi,
                         quibusdam reprehenderit soluta suscipit unde voluptatibus? Maxime?</p>
                 </div>
                 <div class="slide">
-                    <img src="img/slider_img3.png" alt=""/>
+                    <img src="img/slider/slider_img3.png" alt=""/>
                     <p class="caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor est facilis ipsam
                         officiis porro possimus quas. A at delectus doloremque ea explicabo necessitatibus nisi quis quo
                         rerum tempore voluptates, voluptatum!</p>
                 </div>
                 <div class="slide">
-                    <img src="img/slider_img4.png" alt=""/>
+                    <img src="img/slider/slider_img4.png" alt=""/>
                     <p class="caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, dolore et eum
                         magnam natus optio rem. Accusantium dicta exercitationem modi neque odio pariatur possimus, quas
                         repellendus sint, ullam, vero voluptates.</p>
                 </div>
-                <img class="left" src="img/left.png" alt="">
-                <img class="right" src="img/right.png" alt="">
+                <img class="left" src="img/slider/left.png" alt="">
+                <img class="right" src="img/slider/right.png" alt="">
             </div>
 
             <div id="slider-nav">
@@ -355,6 +307,8 @@
 <script type="text/javascript" src="libs/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
 <!--<script type="text/javascript" src="./slider.js"></script>-->
 <script type="text/javascript" src="script/shoping_cart.js"></script>
+ <script type="text/javascript" src="script/Basket.js"></script>
+<script type="text/javascript" src="script/basket_item.js"></script>
 <script type="text/javascript" src="script/main.js"></script>
 
 </body>
