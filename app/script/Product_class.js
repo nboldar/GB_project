@@ -173,7 +173,7 @@ class Product {
 }
 
 
-class basket_item {
+class product_class {
     constructor(id, title, url, price, size, subamout) {
     }
 }
