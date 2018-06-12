@@ -53,7 +53,6 @@ class Product {
         let $itemSubtotal = $(`<span class="card-sum">$${this.subtotal()}</span>`);
         let $closeBtn = $(`<span class="action fa fa-times-circle"></span>`);
         $jQueryElement.append($itemWrapper);
-        // console.log('ok');
         $itemWrapper.append($itemCard);
         $itemWrapper.append($itemInfo);
         $itemCard.append($itemImg);
@@ -100,7 +99,6 @@ class Product {
 
         });
         $itemWrapper.insertBefore($jQueryElement);
-        // $jQueryElement.append($itemWrapper);
         $itemWrapper.append($itemImg);
         $itemWrapper.append($itemWrapperForInfo);
         $itemWrapper.append($deleteBtn);

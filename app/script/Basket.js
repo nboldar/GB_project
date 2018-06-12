@@ -69,7 +69,6 @@ class Basket {
             if (+id_product === this.basketItems[i].id) {
                 this.basketItems[i].quatity = val;
                 this.basketItems[i].subamount = val * this.basketItems[i].price;
-                // console.log($(`#${this.idTotalMiniCart}`).parent().parent().find(`[data-id=${id_product}]`).find('span').first().html());
                 $(`#${this.idTotalMiniCart}`)
                     .parent()
                     .parent()
@@ -95,7 +94,6 @@ class Basket {
 
     //TODO - удаление товара из корзины
     remove(id_product, sum) {
-        console.log(this.basketItems);
         let basketRemoveItem = {
             id_product,
             sum //price: price
@@ -119,7 +117,6 @@ class Basket {
     allremove(){
         this.basketItems.length=0;
         $(`#${this.id}`).empty();
-        // console.log($(`#${this.idTotalMiniCart}`).parent().parent().children(`[data-id]`));
         $(`#${this.idTotalMiniCart}`).parent().parent().children(`[data-id]`).remove();
         this.countGoods=0;
         this.amountRefresh();
