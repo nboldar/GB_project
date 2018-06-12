@@ -275,6 +275,9 @@
   background-color: #fff;
   color: #f16d7f;
 }
+#dialog {
+  visibility: hidden;
+}
 @media (max-width: 992px) {
   .subscribe {
     background-color: transparent;

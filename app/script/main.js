@@ -23,9 +23,9 @@ $(document).ready(function () {
                         modal: true,
                         hide: {effect: "blind", duration: 300},
                         show: {effect: "blind", duration: 300},
-                        title: 'Thanks!',
-                        width: 300,
-                        height:100,
+                        title: 'Thanks! Your purchase added to cart!',
+                        width: 400,
+                        height:40,
                     })
                 }
             })
