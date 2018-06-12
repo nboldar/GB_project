@@ -26,14 +26,19 @@
                 </form>
             </div>
             <div class="account-btn-conteiner">
-                <a href="javascript://" class="cart-img-ref">
+                <div href="javascript://" class="cart-img-ref">
                     <i class="fa fa-shopping-cart fa-2x cart-img" aria-hidden="true"></i>
-
-                    <!--<img class="cart-img" src="img/shopping-cart-empty.png" alt="Cart">-->
-                    <div class="hidden-cart">
-
+                    <div id="cart-item-amount"></div>
+                    <div class="pointer"></div>
+                    <div id="cart-mini" class="cart-mini">
+                        <div class="total-sum">
+                            <span>total</span>
+                            <span id="total-mini-cart"></span>
+                        </div>
+                        <button type="button" class="checkout-btn" onclick="location.href='checkout.html'">checkout</button>
+                        <button type="button" class="go-to-cart-btn" onclick="location.href='shoping_cart.html'">go to cart</button>
                     </div>
-                </a>
+                </div>
                 <button class="main-header-account-btn" name="My Account">My Account</button>
             </div>
         </div>
@@ -41,13 +46,71 @@
     <!-- -главная навигация -->
     <nav class="navigation">
         <ul class="navigation-menu">
-            <li><a href="javascript://" class="navigation-menu-item">home</a></li>
-            <li><a href="javascript://" class="navigation-menu-item">men</a></li>
-            <li><a href="javascript://" class="navigation-menu-item">women</a></li>
-            <li><a href="javascript://" class="navigation-menu-item">kids</a></li>
-            <li><a href="javascript://" class="navigation-menu-item">accoseriese</a></li>
-            <li><a href="javascript://" class="navigation-menu-item">fetured</a></li>
-            <li><a href="javascript://" class="navigation-menu-item">hot deals</a></li>
+            <li>
+                <a href="javascript://" class="navigation-menu-item">home</a>
+                <ul class="navigation-menu-submenu hide">
+                    <li><a href="javascript://" class="navigation-menu-item">About company</a></li>
+                    <li><a href="javascript://" class="navigation-menu-item">Contacts</a></li>
+                    <li><a href="javascript://" class="navigation-menu-item">Servise</a></li>
+                    <li><a href="javascript://" class="navigation-menu-item">Useful info</a></li>
+                </ul>
+
+            </li>
+
+            <li>
+                <a href="javascript://" class="navigation-menu-item">men</a>
+                <ul class="navigation-menu-submenu hide">
+                    <li><a href="javascript://" class="navigation-menu-item">About company</a></li>
+                    <li><a href="javascript://" class="navigation-menu-item">Contacts</a></li>
+                    <li><a href="javascript://" class="navigation-menu-item">Servise</a></li>
+                    <li><a href="javascript://" class="navigation-menu-item">Useful info</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript://" class="navigation-menu-item">women</a>
+                <ul class="navigation-menu-submenu hide">
+                    <li><a href="javascript://" class="navigation-menu-item">About company</a></li>
+                    <li><a href="javascript://" class="navigation-menu-item">Contacts</a></li>
+                    <li><a href="javascript://" class="navigation-menu-item">Servise</a></li>
+                    <li><a href="javascript://" class="navigation-menu-item">Useful info</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript://" class="navigation-menu-item">kids</a>
+                <ul class="navigation-menu-submenu hide">
+                    <li><a href="javascript://" class="navigation-menu-item">About company</a></li>
+                    <li><a href="javascript://" class="navigation-menu-item">Contacts</a></li>
+                    <li><a href="javascript://" class="navigation-menu-item">Servise</a></li>
+                    <li><a href="javascript://" class="navigation-menu-item">Useful info</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript://" class="navigation-menu-item">accoseriese</a>
+                <ul class="navigation-menu-submenu hide">
+                    <li><a href="javascript://" class="navigation-menu-item">About company</a></li>
+                    <li><a href="javascript://" class="navigation-menu-item">Contacts</a></li>
+                    <li><a href="javascript://" class="navigation-menu-item">Servise</a></li>
+                    <li><a href="javascript://" class="navigation-menu-item">Useful info</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript://" class="navigation-menu-item">fetured</a>
+                <ul class="navigation-menu-submenu hide">
+                    <li><a href="javascript://" class="navigation-menu-item">About company</a></li>
+                    <li><a href="javascript://" class="navigation-menu-item">Contacts</a></li>
+                    <li><a href="javascript://" class="navigation-menu-item">Servise</a></li>
+                    <li><a href="javascript://" class="navigation-menu-item">Useful info</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript://" class="navigation-menu-item">hot deals</a>
+                <ul class="navigation-menu-submenu hide">
+                    <li><a href="javascript://" class="navigation-menu-item">About company</a></li>
+                    <li><a href="javascript://" class="navigation-menu-item">Contacts</a></li>
+                    <li><a href="javascript://" class="navigation-menu-item">Servise</a></li>
+                    <li><a href="javascript://" class="navigation-menu-item">Useful info</a></li>
+                </ul>
+            </li>
         </ul>
     </nav>
 
@@ -275,10 +338,13 @@
         </div>
     </div>
     </div>
-    <script type="text/javascript" src="libs/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="libs/jquery/dist/jquery.js"></script>
     <script type="text/javascript" src="libs/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
-    <!--<script type="text/javascript" src="./slider.js"></script>-->
-    <script type="text/javascript" src="script/single_page.js"></script>
+    <script type="text/javascript" src="script/submenu.js"></script>
+    <script type="text/javascript" src="script/slider.js"></script>
+    <script type="text/javascript" src="script/Basket.js"></script>
+    <script type="text/javascript" src="script/basket_item.js"></script>
+    <script type="text/javascript" src="script/main.js"></script>
 </body>
 
 </html>

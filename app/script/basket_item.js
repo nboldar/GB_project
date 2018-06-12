@@ -84,28 +84,90 @@ class Product {
 
             'data-id': this.id,
         });
-        let $title=$('<p />',{
-            class:"product-name",
+        let $title = $('<p />', {
+            class: "product-name",
             text: this.title,
-            });
-        let $price=$('<p />',{
-            class:"product-price",
+        });
+        let $price = $('<p />', {
+            class: "product-price",
 
         });
-        let $innerPrice=$(`<span>${this.quatity}</span>x<span>$${this.price}</span>`);
+        let $innerPrice = $(`<span>${this.quatity}</span>x<span>$${this.price}</span>`);
 
         let $deleteBtn = $(`<span class="action fa fa-times-circle"></span>`);
-        let $totalAmount=$('<div />',{
+        let $totalAmount = $('<div />', {
             class: 'product-total-sum',
 
         });
-
-        $jQueryElement.append($itemWrapper);
+        $itemWrapper.insertBefore($jQueryElement);
+        // $jQueryElement.append($itemWrapper);
         $itemWrapper.append($itemImg);
         $itemWrapper.append($itemWrapperForInfo);
         $itemWrapper.append($deleteBtn);
         $itemWrapperForInfo.append($title);
         $itemWrapperForInfo.append($innerPrice);
+    }
+
+    renderInCatalog($jQueryElement) {
+        let $itemWrapper = $('<div />', {
+            class: 'product-card',
+            'data-id': this.id,
+        });
+        let $itemImg = $('<img />', {
+            class: 'product-card-main-img',
+            'data-id': this.id,
+            src: this.url,
+            alt: this.title,
+        });
+        let $itemDivHelper = $('<div />', {
+            class: 'product-card-darken',
+            'data-id': this.id,
+
+        });
+        let $title = $('<span />', {
+            class: "product-name",
+            text: this.title,
+        });
+        let $price = $('<p />', {
+            class: "product-price",
+            text: `$${this.price}`,
+        });
+        let $addToCartBtn=$('<a />',{
+            class:'product-card-icon cart-add',
+            href:'javascript://',
+        });
+        let $addContinueBtn=$('<a />',{
+            class:'product-card-icon cart-continue',
+            href:'javascript://',
+        });
+        let $addToFavouriteBtn=$('<a />',{
+            class:'product-card-icon cart-favourite',
+            href:'javascript://',
+        });
+        let addToCartImg=$('<img />',{
+            src:'img/icon/add_to_cart.png',
+            alt:'Add to cart',
+            'data-id': this.id,
+        });
+        let addContinueImg=$('<img />',{
+            src:'img/icon/add_to_cart_copy.png',
+            alt:'Buy again',
+        });
+        let addToFavouriteImg=$('<img />',{
+            src:'img/icon/add_to_cart_copy2.png',
+            alt:'Add to favourite',
+        });
+        $jQueryElement.append($itemWrapper);
+        $itemWrapper.append($itemImg);
+        $itemWrapper.append($itemDivHelper);
+        $itemWrapper.append($addToCartBtn);
+        $itemWrapper.append($addContinueBtn);
+        $itemWrapper.append($addToFavouriteBtn);
+        $itemWrapper.append($title);
+        $itemWrapper.append($price);
+        $addToCartBtn.append(addToCartImg);
+        $addContinueBtn.append(addContinueImg);
+        $addToFavouriteBtn.append(addToFavouriteImg)
     }
 
 }

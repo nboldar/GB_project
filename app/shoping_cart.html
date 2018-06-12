@@ -8,8 +8,6 @@
     <link rel="shortcut icon" href="img/icon/fav.ico" type="image/ico">
     <link rel="stylesheet" type="text/css" href="./slider.css">
     <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
-    <!--<link rel="stylesheet" type="text/css" href="slick/slick.css">-->
-    <!--<link rel="stylesheet" type="text/css" href="slick/slick-theme.css">-->
     <link rel="stylesheet" type="text/css" href="css/shoping_cart.css">
     <title>Shoping Cart</title>
 </head>
@@ -28,14 +26,20 @@
             </form>
         </div>
         <div class="account-btn-conteiner">
-            <a href="javascript://" class="cart-img-ref">
+            <div href="javascript://" class="cart-img-ref">
                 <i class="fa fa-shopping-cart fa-2x cart-img" aria-hidden="true"></i>
-                <div id="cart-item-amount">15</div>
+                <div id="cart-item-amount"></div>
                 <div class="pointer"></div>
-                <div id="cart-mini"></div>
-                <!--<img class="cart-img" src="img\shopping-cart-empty.png" alt="Cart">-->
-            </a>
-            <button class="main-header-account-btn" name="My Account">My Account
+                <div id="cart-mini" class="cart-mini">
+                    <div class="total-sum">
+                        <span>total</span>
+                        <span id="total-mini-cart"></span>
+                    </div>
+                    <button type="button" class="checkout-btn" onclick="location.href='checkout.html'">checkout</button>
+                    <button type="button" class="go-to-cart-btn" onclick="location.href='shoping_cart.html'">go to cart</button>
+                </div>
+            </div>
+            <button class="main-header-account-btn" name="My Account">My Account</button>
         </div>
     </div>
 </header>
@@ -136,8 +140,8 @@
     </div>
     <div id="shopping-cart-wrapper"></div>
     <div class="cart-shopping">
-        <button class="cart-shopping-btn">clear shopping cart</button>
-        <button class="cart-shopping-btn">continue shopping</button>
+        <button class="cart-shopping-btn clear-btn">clear shopping cart</button>
+        <button class="cart-shopping-btn continue-shopping-btn" onclick="location.href='product.html'">continue shopping</button>
     </div>
 
     <div class="cart-form">
@@ -305,8 +309,8 @@
 </div>
 <script type="text/javascript" src="libs/jquery/dist/jquery.js"></script>
 <script type="text/javascript" src="libs/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
-<!--<script type="text/javascript" src="./slider.js"></script>-->
-<script type="text/javascript" src="script/shoping_cart.js"></script>
+<script type="text/javascript" src="script/submenu.js"></script>
+<script type="text/javascript" src="script/slider.js"></script>
  <script type="text/javascript" src="script/Basket.js"></script>
 <script type="text/javascript" src="script/basket_item.js"></script>
 <script type="text/javascript" src="script/main.js"></script>
