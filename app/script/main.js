@@ -6,7 +6,6 @@ $(document).ready(function () {
     $('body').on('click', function (event) {
         let $target = $(event.target);
         if ($target.hasClass("fa-times-circle") == true) {
-            console.log('ok');
             let idProduct = parseInt($target.parent().attr('data-id'));
             let sum = parseInt($target.parent().find('span.card-sum').text().slice(1));
             basket.remove(idProduct, sum);
@@ -20,6 +19,14 @@ $(document).ready(function () {
             catalogArr.forEach(function (elem) {
                 if(elem.id===id_product){
                     basket.add(elem);
+                    $('#dialog').dialog({
+                        modal: true,
+                        hide: {effect: "blind", duration: 300},
+                        show: {effect: "blind", duration: 300},
+                        title: 'Thanks!',
+                        width: 300,
+                        height:100,
+                    })
                 }
             })
         }
@@ -38,7 +45,6 @@ $(document).ready(function () {
             let idProduct = $input.attr('data-id');
             let val = parseInt($input.val());
             let price = parseInt($input.parent().find('span.unite-price').text().slice(1));
-            console.log(price);
             $input.parent().find('.card-sum').html(`$${price * val}`);
             basket.addOneMoreItem(idProduct, val);
         }

@@ -104,8 +104,12 @@ class Basket {
             if (basketRemoveItem.id_product === this.basketItems[i].id) {
                 this.basketItems.splice(i, 1);
                 this.countGoods--;
-                $(`[data-id=${basketRemoveItem.id_product}]`).first().remove();
-                $(`[data-id=${basketRemoveItem.id_product}]`).remove();
+                let $neededElement=$(`[data-id=${basketRemoveItem.id_product}]`);
+                $neededElement.first().remove();
+                if($neededElement.hasClass('product-card')==false){
+                    $neededElement.remove();
+                }
+
                 this.amountRefresh();
                 this.render();
                 break;
