@@ -1,5 +1,9 @@
 $(document).ready(function () {
     menu.initShowSubMenu();
+    $('#slider-range').slider({
+        range:true,
+        values: [ 10, 25 ],
+    });
     //Создаем экземпляр корзины
     let catalogArr=[];
     let basket = new Basket('shopping-cart-wrapper', 'cart-item-amount', 'proceed-subtotal', 'grand-price', 'total-mini-cart');
