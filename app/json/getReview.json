@@ -1,0 +1,24 @@
+{
+  "result": 1,
+  "error_message": "Произошла ошибка",
+  "comments": [
+    {
+      "id_comment": 123,
+      "user_email":"apple@mail.ru",
+      "user_name":"Alex",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aperiam consequatur cumque ."
+    },
+    {
+      "id_comment": 124,
+      "user_email":"bomba@gmail.com",
+      "user_name":"Nikolay",
+      "text": "Casum sentit dominus. Caveat emptor. Ceteris paribus. Condicio sine qua non. Contra factum."
+    },
+    {
+      "id_comment": 125,
+      "user_email":"bundes@yandex.ru",
+      "user_name":"Gregory",
+      "text": "Ex maleficio non oritur contractus. Ex turpi causa actio non oritur. Falsus in uno ."
+    }
+  ]
+}

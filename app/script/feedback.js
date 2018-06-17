@@ -1,5 +1,6 @@
 "use strict";
 const validationForm = {
+    messageObj:{},
     nameId: 'name',
     phoneId: 'phone',
     emailId: 'email',
@@ -56,11 +57,11 @@ const validationForm = {
                 elemName.removeClass('error', 500)
             }
 
-            if (!self.phonePattern.test(elemPhone.val())) {
-                self.errorFunc(elemPhone,self.phoneErrorMassege);
-            } else {
-                elemPhone.removeClass('error', 500)
-            }
+            // if (!self.phonePattern.test(elemPhone.val())) {
+            //     self.errorFunc(elemPhone,self.phoneErrorMassege);
+            // } else {
+            //     elemPhone.removeClass('error', 500)
+            // }
 
             if (!self.emailPattern.test(elemEmail.val())) {
                 self.errorFunc(elemEmail,self.emailErrorMassege);
@@ -73,23 +74,26 @@ const validationForm = {
             } else {
                 textBlock.removeClass('error', 500);
             }
-            if (city.val() === undefined || city.val() === '') {
-                self.errorFunc(city,self.cityErrorMassege);
-            } else {
-                city.removeClass('error', 500);
-            }
-            if (birth.val() === undefined || birth.val() === '') {
-                self.errorFunc(birth,self.birthErrorMassege);
-            } else {
-                birth.removeClass('error', 500);
-            }
+            // if (city.val() === undefined || city.val() === '') {
+            //     self.errorFunc(city,self.cityErrorMassege);
+            // } else {
+            //     city.removeClass('error', 500);
+            // }
+            // if (birth.val() === undefined || birth.val() === '') {
+            //     self.errorFunc(birth,self.birthErrorMassege);
+            // } else {
+            //     birth.removeClass('error', 500);
+            // }
             console.log(self.errorDialog);
             if (self.errorDialog.length > 0) {
                 self.dialog(self.errorDialog, 'Внимание ошибки!');
             } else {
+                self.messageObj.user_name=$(`#${self.nameId}`).val();
+                self.messageObj.user_email=$(`#${self.emailId}`).val();
+                self.messageObj.text=$(`.${self.messageId}`).val();
                 self.postfeedback();
                 self.reset();
-                self.errorDialog.push('Ваш сообщение отправлено!');
+                self.errorDialog.push('Ваше сообщение отправлено!');
                 self.dialog(self.errorDialog, 'Спасибо!');
             }
         });

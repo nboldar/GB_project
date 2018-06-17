@@ -5,9 +5,24 @@
 @import "footer.less";
 @import "product_card.less";
 
+.main-wrapper {
+  .flexbox(flex, row, space-around, flex-start, wrap);
+}
+
+#all-comments {
+  .flexbox(flex, column, flex-start , center, nowrap);
+  margin-top: 50px;
+  color:@black-text;
+  font-size: 24px;
+  & > p {
+    .upper;
+  }
+
+}
+
 .feedback {
   position: relative;
-  .flexbox(flex, column, center, center, nowrap);
+  .flexbox(flex, column, flex-start, center, nowrap);
   margin-top: 50px;
   &-input {
     height: 40px;
@@ -82,12 +97,13 @@
 .error {
   border: 2px solid red;
 }
-
-//#birth {
-//  border-color: #b9b9b9;
-//  border: 1px solid ;
-//}
+#phone,
+#city,
+#birth {
+ display: none;
+}
 
 .feedback-city-wrapper {
   position: relative;
 }
+

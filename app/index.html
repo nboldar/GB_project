@@ -15,61 +15,36 @@
 
 <body>
 <!-- шапка сайта -->
-<!-- <div class="wrapper"> -->
-<div class="banner">
-    <header class="main-header">
-        <div class="main-header-conteiner">
-            <div class="main-header-conteiner-mobile">
-                <a href="index.html" class="main-header-logo">
-                    <img src="img/icon/main_logo.png" alt="logo" class="main-header-logo-img">
-                    <span class="main-header-logo-brand">bran</span>
-                    <span class="main-header-logo-brand-letter">d</span>
-                </a>
-                <div class="search">
-                    <form class="search-form">
-                        <button class="search-form-browse"><span class="browse-word">Browse</span></button>
-                        <input class="search-form-input" type="text" placeholder="&#160;&#160;&#160;Search for Items">
-                        <button class="search-form-submit"><span class="fa fa-search browse-icon"
-                                                                 aria-hidden="true"></span>
-                        </button>
-                    </form>
-                </div>
-            </div>
-            <div class="account-btn-conteiner">
-                <label for="navigation">
-                    <div class="burger-menu">
-                        <div class="burger__item crossed-right">
-                            <div class="burger__item-line"></div>
-                        </div>
-                    </div>
-                </label>
-                <a href="javascript://" class="user-icon">
-                    <i class="fa fa-user-o fa-2x user-icon-img" aria-hidden="true"></i>
-                </a>
-                <div class="cart-img-ref">
-                    <i class="fa fa-shopping-cart fa-2x cart-img" aria-hidden="true"></i>
-                    <div id="cart-item-amount"></div>
-                    <div class="pointer"></div>
-                    <div id="cart-mini" class="cart-mini">
-                        <div class="total-sum">
-                            <span>total</span>
-                            <span id="total-mini-cart">$1000</span>
-                        </div>
-                        <button type="button" class="checkout-btn" onclick="location.href='checkout.html'">checkout
-                        </button>
-                        <button type="button" class="go-to-cart-btn" onclick="location.href='shoping_cart.html'">go to
-                            cart
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <button class="main-header-account-btn" name="My Account">My Account
-            </button>
+<header class="main-header">
+    <div class="main-header-conteiner">
+        <a href="index.html" class="main-header-logo"><img src="img/icon/logo.png" alt="logo" class="main-header-logo"></a>
+        <div class="search">
+            <form class="search-form">
+                <button class="search-form-browse"><span class="browse-word">Browse</span></button>
+                <input class="search-form-input" type="text" placeholder="&#160;&#160;&#160;Search for Items">
+                <button class="search-form-submit"><span class="fa fa-search browse-icon" aria-hidden="true"></span>
+                </button>
+            </form>
         </div>
-</div>
+        <div class="account-btn-conteiner">
+            <div href="javascript://" class="cart-img-ref">
+                <i class="fa fa-shopping-cart fa-2x cart-img" aria-hidden="true"></i>
+                <div id="cart-item-amount"></div>
+                <div class="pointer"></div>
+                <div id="cart-mini" class="cart-mini">
+                    <div class="total-sum">
+                        <span>total</span>
+                        <span id="total-mini-cart"></span>
+                    </div>
+                    <button type="button" class="checkout-btn" onclick="location.href='checkout.html'">checkout</button>
+                    <button type="button" class="go-to-cart-btn" onclick="location.href='shoping_cart.html'">go to cart</button>
+                </div>
+            </div>
+            <button class="main-header-account-btn" name="My Account">My Account</button>
+        </div>
+    </div>
 </header>
 <!-- -главная навигация -->
-<input type="checkbox" class="navigation-mobile" id="navigation">
 <nav class="navigation">
     <ul class="navigation-menu">
         <li>
@@ -131,7 +106,7 @@
         <li>
             <a href="javascript://" class="navigation-menu-item">hot deals</a>
             <ul class="navigation-menu-submenu hide">
-                <li><a href="javascript://" class="navigation-menu-item">About company</a></li>
+                <li><a href="feedback.html" class="navigation-menu-item">Feedback</a></li>
                 <li><a href="javascript://" class="navigation-menu-item">Contacts</a></li>
                 <li><a href="javascript://" class="navigation-menu-item">Servise</a></li>
                 <li><a href="javascript://" class="navigation-menu-item">Useful info</a></li>
@@ -308,7 +283,7 @@
             <ul class="footer-links-item">
                 <li class="footer-links-head">company</li>
                 <li><a href="javascript://">Home</a></li>
-                <li><a href="javascript://">Stop</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
                 <li><a href="javascript://">About</a></li>
                 <li><a href="javascript://">How It Works</a></li>
                 <li><a href="javascript://">Contact</a></li>

@@ -1,0 +1,52 @@
+.flexrow {
+  display: flex;
+  flex-direction: row;
+}
+.flexcol {
+  display: flex;
+  flex-direction: column;
+}
+.block {
+  display: block;
+}
+.upper {
+  text-transform: uppercase;
+}
+.user-name {
+  margin-left: 5px;
+}
+.comment {
+  background-color: #fff;
+  border: 1px solid #919198;
+  width: 500px;
+  font-size: 20px;
+  margin: 10px 20px;
+}
+.textcomment {
+  min-height: 50px;
+  font-size: 14px;
+  border: 1px solid #f16d7f;
+  background-color: #ececec;
+  margin: 5px;
+  padding: 5px;
+}
+.status {
+  margin: 5px;
+  font-size: 15px;
+}
+.approve,
+.reject {
+  margin: 5px 50px;
+  width: 100px;
+  height: 30px;
+  outline: none;
+}
+.reject {
+  float: right;
+}
+.addcomment {
+  display: block;
+  width: 500px;
+  margin-left: 20px;
+  height: 30px;
+}

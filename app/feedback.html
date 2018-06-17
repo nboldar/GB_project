@@ -9,12 +9,12 @@
     <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/slider.css">
     <link rel="stylesheet" href="libs/jquery-ui-1.12.1.custom/jquery-ui.min.css">
-    <!--<link rel="stylesheet" href="libs/jquery-ui-1.12.1.custom/jquery-ui.structure.min.css">-->
+    <link rel="stylesheet" href="css/comment.css">
     <!--<link rel="stylesheet" href="libs/jquery-ui-1.12.1.custom/jquery-ui.theme.min.css">-->
 
 
     <link rel="stylesheet" href="css/feedback.css">
-    <title>Document</title>
+    <title>Feedback</title>
 </head>
 <body>
 <!-- шапка сайта -->
@@ -30,12 +30,22 @@
             </form>
         </div>
         <div class="account-btn-conteiner">
-            <a href="javascript://" class="cart-img-ref">
+            <div href="javascript://" class="cart-img-ref">
                 <i class="fa fa-shopping-cart fa-2x cart-img" aria-hidden="true"></i>
-
-                <!--<img class="cart-img" src="img\shopping-cart-empty.png" alt="Cart">-->
-            </a>
-            <button class="main-header-account-btn" name="My Account">My Account
+                <div id="cart-item-amount"></div>
+                <div class="pointer"></div>
+                <div id="cart-mini" class="cart-mini">
+                    <div class="total-sum">
+                        <span>total</span>
+                        <span id="total-mini-cart"></span>
+                    </div>
+                    <button type="button" class="checkout-btn" onclick="location.href='checkout.html'">checkout</button>
+                    <button type="button" class="go-to-cart-btn" onclick="location.href='shoping_cart.html'">go to
+                        cart
+                    </button>
+                </div>
+            </div>
+            <button class="main-header-account-btn" name="My Account">My Account</button>
         </div>
     </div>
 </header>
@@ -115,33 +125,36 @@
     <div class="arrivals">
         <span class="arrivals_new">...let us know what you think</span>
         <ul class="breadcrumbs">
-            <li class="breadcrumbs_item"><a href="javascript://" class="breadcrumbs_item_a">home</a></li>
+            <li class="breadcrumbs_item"><a href="index.html" class="breadcrumbs_item_a">home</a></li>
             <!--<li class="breadcrumbs_item"><a href="javascript://" class="breadcrumbs_item_a">men</a></li>-->
             <li class="breadcrumbs_item"><span class="active">feedback</span></li>
         </ul>
     </div>
 </div>
-
-
 <hr>
-<form action="javascript://" class="feedback">
-    <input class="feedback-input" id="name" type="text" placeholder="Имя">
-    <input class="feedback-input" id="birth" type="text" placeholder="Дата рождения">
-    <input class="feedback-input" id="phone" type="text" placeholder="Телефон в формате 70000000000">
-    <input class="feedback-input" id="email" type="text" placeholder="E-mail">
-    <!--<div class="feedback-city-wrapper">-->
+<div class="main-wrapper">
+    <form action="URL" method="post" class="feedback">
+        <input class="feedback-input" id="name" type="text" placeholder="Your name">
+        <input class="feedback-input" id="birth" type="text" placeholder="Date of birth">
+        <input class="feedback-input" id="phone" type="text" placeholder="Телефон в формате 70000000000">
+        <input class="feedback-input" id="email" type="text" placeholder="E-mail">
+        <!--<div class="feedback-city-wrapper">-->
         <input class="feedback-input" id="city" type="text" placeholder="Город">
         <div id="search"></div>
-    <!--</div>-->
-    <textarea class="message" placeholder="Текст сообщения"></textarea>
-    <div class="button-group">
-        <button id="submit" class="button">Отправить</button>
-        <button id="reset" class="button">Очистить</button>
+        <!--</div>-->
+        <textarea class="message" placeholder="Text here your message"></textarea>
+        <div class="button-group">
+            <button id="submit" class="button">Send</button>
+            <button id="reset" class="button">Clear form</button>
+        </div>
+        <div id="dialog" title="Basic dialog">
+            <div></div>
+        </div>
+    </form>
+    <div id="all-comments">
+        <p>Recent comments</p>
     </div>
-    <div id="dialog" title="Basic dialog">
-        <div></div>
-    </div>
-</form>
+</div>
 
 
 <div class="subscribe">
@@ -157,7 +170,8 @@
             <span class="subscribe-form-title">subscribe</span>
             <span class="subscribe-form-title2">for our newsletters and information</span>
             <form action="input" class="input">
-                <input class="subscribe-mail" title="Для получения новостей введите свой E-mail." type="email" placeholder="Enter Your Email">
+                <input class="subscribe-mail" title="Для получения новостей введите свой E-mail." type="email"
+                       placeholder="Enter Your Email">
                 <input type="button" value="Subscribe" class="subscribe-submit">
             </form>
         </div>
@@ -281,7 +295,13 @@
 
 <script type="text/javascript" src="libs/jquery/dist/jquery.js"></script>
 <script type="text/javascript" src="libs/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+<script type="text/javascript" src="script/Basket.js"></script>
+<script type="text/javascript" src="script/main.js"></script>
+<script type="text/javascript" src="script/submenu.js"></script>
+<script type="text/javascript" src="script/slider.js"></script>
 <script type="text/javascript" src="script/feedback.js"></script>
-
+<script type="text/javascript" src="script/Product_class.js"></script>
+ <script type="text/javascript" src="script/all_comments.js"></script>
+<script type="text/javascript" src="script/comment.js"></script>
 </body>
 </html>

@@ -1,11 +1,11 @@
 $(document).ready(function () {
     menu.initShowSubMenu();
     $('#slider-range').slider({
-        range:true,
-        values: [ 10, 25 ],
+        range: true,
+        values: [10, 25],
     });
     //Создаем экземпляр корзины
-    let catalogArr=[];
+    let catalogArr = [];
     let basket = new Basket('shopping-cart-wrapper', 'cart-item-amount', 'proceed-subtotal', 'grand-price', 'total-mini-cart');
     $('body').on('click', function (event) {
         let $target = $(event.target);
@@ -21,7 +21,7 @@ $(document).ready(function () {
         if ($target.is('.cart-add>img')) {
             let id_product = parseInt($target.attr('data-id'));
             catalogArr.forEach(function (elem) {
-                if(elem.id===id_product){
+                if (elem.id === id_product) {
                     basket.add(elem);
                     $('#dialog').dialog({
                         modal: true,
@@ -29,17 +29,37 @@ $(document).ready(function () {
                         show: {effect: "blind", duration: 300},
                         title: 'Thanks! Your purchase added to cart!',
                         width: 400,
-                        height:40,
+                        height: 40,
                     })
                 }
             })
         }
-        if($target.is('button.clear-btn')){
+        if ($target.is('button.clear-btn')) {
             console.log('its ok');
             basket.allremove();
         }
-        if($target.is('a')){
-            event.preventDefault();
+        if ($target.is('.approve')) {
+            $target.parent().find('.status').html('Comment approved');
+            $target.parent().find('.textcomment').css('border-color','lightgreen');
+            $target.parent().find('.reject').prop('disabled', true);
+        }
+        if ($target.is('.reject')) {
+            let id = $target.attr('data-id');
+            allComments.removeComment(id);
+            $target.parent().remove();
+        }
+        if ($target.is('#submit')) {
+            if (validationForm.errorDialog[0]==='Ваше сообщение отправлено!') {
+                let arr = allComments.allComments;
+                let id = arr[arr.length - 1].id_comment + 1;
+                let email = validationForm.messageObj.user_email;
+                let name = validationForm.messageObj.user_name;
+                let text = validationForm.messageObj.text;
+                let new_comment = new Comment(id, email, name, text);
+                arr.push(new_comment);
+                new_comment.render($(`#${allComments.id}`));
+
+            }
         }
 
     });
@@ -76,5 +96,21 @@ $(document).ready(function () {
     catalogArr.forEach(function (elem) {
         elem.renderInCatalog($('.product-search-product-card'))
     });
+    let allComments = new Comments('all-comments');
+    // $(document).ajaxComplete(function () {
+    //     if(allComments.isCommentsGet() === true) {
+    //         console.log(allComments.allComments);
+    //         allComments.allComments.forEach(function (elem) {
+    //             let id=elem.id_comment;
+    //             let email=elem.user_email;
+    //             let name=elem.user_name;
+    //             let text=elem.text;
+    //             let new_comment=new Comment(id,email,name,text);
+    //             new_comment.render($('#all-comments'));
+    //         });
+    //     }
+    //
+    // });
+
 
 });
