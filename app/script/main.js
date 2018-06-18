@@ -47,6 +47,8 @@ $(document).ready(function () {
             let id = $target.attr('data-id');
             allComments.removeComment(id);
             $target.parent().remove();
+            console.log(allComments.allComments);
+
         }
         if ($target.is('#submit')) {
             if (validationForm.errorDialog[0]==='Ваше сообщение отправлено!') {
@@ -58,6 +60,7 @@ $(document).ready(function () {
                 let new_comment = new Comment(id, email, name, text);
                 arr.push(new_comment);
                 new_comment.render($(`#${allComments.id}`));
+                console.log(allComments.allComments);
 
             }
         }
